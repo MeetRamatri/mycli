@@ -14,4 +14,11 @@ program
         console.log(`The sum of ${num1} and ${num2} is ${sum}.`);
     });
     
+program
+    .command('subtract <num1> <num2>')
+    .action((num1: string, num2: string) => {    
+        const difference = parseFloat(num1) - parseFloat(num2);
+        console.log(`The difference between ${num1} and ${num2} is ${difference}.`);
+    });
+
 program.parse();
