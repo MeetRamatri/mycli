@@ -21,4 +21,11 @@ program
         console.log(`The difference between ${num1} and ${num2} is ${difference}.`);
     });
 
+program
+    .command('multiply <num1> <num2>')
+    .action((num1: string, num2: string) => {
+        const product = parseFloat(num1) * parseFloat(num2);
+        console.log(`The product of ${num1} and ${num2} is ${product}.`);
+    });
+
 program.parse();
